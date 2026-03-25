@@ -140,12 +140,18 @@ class QuadradoSoma(MovingCameraScene):
         
         grupo_ab2 = VGroup()
         grupo_ab2.add(label_a4copia, label_b4copia)
-        grupo_ab2.scale(1.7)
 
         grupo_a.scale(1.7)
 
         mais1 = MathTex(r'+').shift(5.1*DOWN + 1.3*LEFT)
+        mais2 = MathTex(r'+').shift(5.1*DOWN + 1.5*RIGHT)
 
-        self.play(grupo_a.animate.shift(4.5*DOWN + 2.5*LEFT), FadeIn(mais1), grupo_ab1.animate.shift(6*DOWN), multiplicacao_2.animate.shift(6*DOWN))
+        dois = MathTex(r'2').shift(5.1*DOWN + 0.6*LEFT)
+
+        grupob1.scale(1.7)
+
+        self.play(grupo_a.animate.shift(4.5*DOWN + 2.5*LEFT), FadeIn(mais1), 
+        grupo_ab1.animate.shift(6.6*DOWN), multiplicacao_2.animate.shift(6.6*DOWN),
+        FadeOut(grupo_ab2), FadeOut(multiplicacao_3), FadeIn(dois), FadeIn(mais2), grupob1.animate.shift(6.6*DOWN + 3*RIGHT))
 
         self.wait(2)
