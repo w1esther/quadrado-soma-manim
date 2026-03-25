@@ -126,8 +126,26 @@ class QuadradoSoma(MovingCameraScene):
 
         self.wait(2)
 
-        quadrado_soma = MathTex(r'(a + b)^2').shift(4*DOWN)
+        quadrado_soma = MathTex(r'(a + b)^2').shift(4.0*DOWN + 0.2*LEFT)
 
-        self.play(FadeIn(quadrado_soma))
+        igual = MathTex(r'=').shift(4.1*DOWN + 1.0*RIGHT)
+
+        self.play(FadeIn(quadrado_soma), FadeIn(igual))
+
+        self.wait(2)
+
+        grupo_ab1 = VGroup()
+        grupo_ab1.add(label_a1, label_b3copia)
+        grupo_ab1.scale(1.7)
+        
+        grupo_ab2 = VGroup()
+        grupo_ab2.add(label_a4copia, label_b4copia)
+        grupo_ab2.scale(1.7)
+
+        grupo_a.scale(1.7)
+
+        mais1 = MathTex(r'+').shift(5.1*DOWN + 1.3*LEFT)
+
+        self.play(grupo_a.animate.shift(4.5*DOWN + 2.5*LEFT), FadeIn(mais1), grupo_ab1.animate.shift(6*DOWN), multiplicacao_2.animate.shift(6*DOWN))
 
         self.wait(2)
