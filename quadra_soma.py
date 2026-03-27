@@ -152,6 +152,6 @@ class QuadradoSoma(MovingCameraScene):
 
         self.play(grupo_a.animate.shift(4.5*DOWN + 2.5*LEFT), FadeIn(mais1), 
         grupo_ab1.animate.shift(6.6*DOWN), multiplicacao_2.animate.shift(6.6*DOWN),
-        FadeOut(grupo_ab2), FadeOut(multiplicacao_3), FadeIn(dois), FadeIn(mais2), grupob1.animate.shift(6.6*DOWN + 3*RIGHT))
+        FadeOut(grupo_ab2), FadeOut(multiplicacao_3), FadeIn(dois), FadeIn(mais2), grupob1.animate.shift(6.6*DOWN + 3.8*RIGHT))
 
         self.wait(2)
